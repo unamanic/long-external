@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: vanity-press
+server:
+  port: 8082
+
+vanity:
+  config:
+    baseUrl: http://localhost:8082
+    printUrl: http://localhost:8081/print

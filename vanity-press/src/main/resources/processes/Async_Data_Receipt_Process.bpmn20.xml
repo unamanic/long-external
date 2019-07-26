@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:design="http://flowable.org/design" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://flowable.org/test">
+  <process id="asyncDataReceiptProcess" name="Async Data Receipt Process" isExecutable="true">
+    <extensionElements>
+      <design:stencilid><![CDATA[BPMNDiagram]]></design:stencilid>
+      <design:stencilsuperid><![CDATA[BPMNDiagram]]></design:stencilsuperid>
+      <design:customstencil><![CDATA[false]]></design:customstencil>
+      <design:id><![CDATA[asyncDataReceiptProcess]]></design:id>
+      <design:name><![CDATA[Async Data Receipt Process]]></design:name>
+      <design:guid><![CDATA[PROCESS_MODEL-478a8b6d-6903-4ff0-9b51-59c60fc05f81]]></design:guid>
+      <design:language><![CDATA[English]]></design:language>
+      <design:creationdate><![CDATA[2019-07-25T14:33:03.228Z]]></design:creationdate>
+      <design:modificationdate><![CDATA[2019-07-25T22:25:15.273Z]]></design:modificationdate>
+      <design:isexecutable><![CDATA[false]]></design:isexecutable>
+      <design:isprocessexecutable><![CDATA[true]]></design:isprocessexecutable>
+      <design:fontsize><![CDATA[12]]></design:fontsize>
+      <design:fontweight><![CDATA[normal]]></design:fontweight>
+      <design:fontstyle><![CDATA[normal]]></design:fontstyle>
+      <design:fontcolor><![CDATA[#000000]]></design:fontcolor>
+      <design:iseagerexecutionfetch><![CDATA[false]]></design:iseagerexecutionfetch>
+      <design:xmlTag><![CDATA[BPMNDiagram]]></design:xmlTag>
+      <design:process_id><![CDATA[asyncDataReceiptProcess]]></design:process_id>
+    </extensionElements>
+    <startEvent id="startnoneevent1" flowable:initiator="initiator" flowable:formFieldValidation="false">
+      <extensionElements>
+        <flowable:work-form-field-validation><![CDATA[false]]></flowable:work-form-field-validation>
+        <design:stencilid><![CDATA[cloudstartnoneevent]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[StartNoneEvent]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["StartNoneEvent"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:id><![CDATA[startnoneevent1]]></design:id>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:formfieldvalidation><![CDATA[false]]></design:formfieldvalidation>
+        <design:trigger><![CDATA[None]]></design:trigger>
+        <design:async><![CDATA[false]]></design:async>
+        <design:interrupting><![CDATA[true]]></design:interrupting>
+        <design:exclusive><![CDATA[true]]></design:exclusive>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:initiator><![CDATA[initiator]]></design:initiator>
+        <design:customstencilid><![CDATA[cloudstartnoneevent]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[StartNoneEvent]]></design:xmlTag>
+      </extensionElements>
+    </startEvent>
+    <userTask id="collectBookInfo" name="Collect Book Info" flowable:assignee="${initiator}" flowable:formFieldValidation="false">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudformtask]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[FormTask]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["Task","FormTask"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:exclusive><![CDATA[true]]></design:exclusive>
+        <design:loopelementindexvariable><![CDATA[loopCounter]]></design:loopelementindexvariable>
+        <design:isforcompensation><![CDATA[false]]></design:isforcompensation>
+        <design:looptype><![CDATA[None]]></design:looptype>
+        <design:assignee-run><![CDATA[${initiator}]]></design:assignee-run>
+        <design:formfieldvalidation><![CDATA[false]]></design:formfieldvalidation>
+        <design:guid><![CDATA[GEAR-abab1398-460c-472e-b3e8-c409562a1896]]></design:guid>
+        <design:tasktype><![CDATA[FormTask]]></design:tasktype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:callacitivity><![CDATA[false]]></design:callacitivity>
+        <design:async><![CDATA[false]]></design:async>
+        <design:id><![CDATA[collectBookInfo]]></design:id>
+        <design:name><![CDATA[Collect Book Info]]></design:name>
+        <design:name_en_us><![CDATA[Collect Book Info]]></design:name_en_us>
+        <design:customstencilid><![CDATA[cloudformtask]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[FormTask]]></design:xmlTag>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sequenceflow1" sourceRef="startnoneevent1" targetRef="collectBookInfo">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudsequenceflow]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[SequenceFlow]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["SequenceFlow"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:showdiamondmarker><![CDATA[false]]></design:showdiamondmarker>
+        <design:conditiontype><![CDATA[None]]></design:conditiontype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:defaultflow><![CDATA[false]]></design:defaultflow>
+        <design:isimmediate><![CDATA[false]]></design:isimmediate>
+        <design:id><![CDATA[sequenceflow1]]></design:id>
+        <design:customstencilid><![CDATA[cloudsequenceflow]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[SequenceFlow]]></design:xmlTag>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sequenceflow2" sourceRef="collectBookInfo" targetRef="configureVariables">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudsequenceflow]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[SequenceFlow]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["SequenceFlow"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:showdiamondmarker><![CDATA[false]]></design:showdiamondmarker>
+        <design:conditiontype><![CDATA[None]]></design:conditiontype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:defaultflow><![CDATA[false]]></design:defaultflow>
+        <design:isimmediate><![CDATA[false]]></design:isimmediate>
+        <design:id><![CDATA[sequenceflow2]]></design:id>
+        <design:customstencilid><![CDATA[cloudsequenceflow]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[SequenceFlow]]></design:xmlTag>
+      </extensionElements>
+    </sequenceFlow>
+    <serviceTask id="callPrintService" name="Call Print Service" flowable:type="http">
+      <extensionElements>
+        <flowable:field name="requestMethod">
+          <flowable:string><![CDATA[POST]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="requestUrl">
+          <flowable:string><![CDATA[http://localhost:8081/print]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="requestHeaders">
+          <flowable:string><![CDATA[Content-Type: application/json]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="requestBody">
+          <flowable:expression><![CDATA[{"callbackUrl": "${callbackUrl}"}]]></flowable:expression>
+        </flowable:field>
+        <flowable:field name="disallowRedirects">
+          <flowable:string><![CDATA[false]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="ignoreException">
+          <flowable:string><![CDATA[false]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="saveRequestVariables">
+          <flowable:string><![CDATA[false]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="saveResponseParameters">
+          <flowable:string><![CDATA[false]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="saveResponseParametersTransient">
+          <flowable:string><![CDATA[false]]></flowable:string>
+        </flowable:field>
+        <flowable:field name="saveResponseVariableAsJson">
+          <flowable:string><![CDATA[false]]></flowable:string>
+        </flowable:field>
+        <design:stencilid><![CDATA[cloudhttptask]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[HttpTask]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["Task","HttpTask"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:save-request-variables><![CDATA[false]]></design:save-request-variables>
+        <design:httptasksaveresponseparameterstransient><![CDATA[false]]></design:httptasksaveresponseparameterstransient>
+        <design:ignore-exception><![CDATA[false]]></design:ignore-exception>
+        <design:loopelementindexvariable><![CDATA[loopCounter]]></design:loopelementindexvariable>
+        <design:isforcompensation><![CDATA[false]]></design:isforcompensation>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:looptype><![CDATA[None]]></design:looptype>
+        <design:callacitivity><![CDATA[false]]></design:callacitivity>
+        <design:guid><![CDATA[GEAR-c5be3bfc-0914-4f23-a395-3027cbc95723]]></design:guid>
+        <design:disallow-redirects><![CDATA[false]]></design:disallow-redirects>
+        <design:tasktype><![CDATA[Http]]></design:tasktype>
+        <design:async><![CDATA[false]]></design:async>
+        <design:request-url><![CDATA[http://localhost:8081/print]]></design:request-url>
+        <design:httptasksaveresponseasjson><![CDATA[false]]></design:httptasksaveresponseasjson>
+        <design:id><![CDATA[callPrintService]]></design:id>
+        <design:exclusive><![CDATA[true]]></design:exclusive>
+        <design:save-response-status><![CDATA[false]]></design:save-response-status>
+        <design:request-body><![CDATA[{"callbackUrl": "${callbackUrl}"}]]></design:request-body>
+        <design:requestheaders><![CDATA[Content-Type: application/json]]></design:requestheaders>
+        <design:requestmethod><![CDATA[POST]]></design:requestmethod>
+        <design:name><![CDATA[Call Print Service]]></design:name>
+        <design:name_en_us><![CDATA[Call Print Service]]></design:name_en_us>
+        <design:customstencilid><![CDATA[cloudhttptask]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[HttpTask]]></design:xmlTag>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sequenceflow3" sourceRef="callPrintService" targetRef="receivePrintComplete">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudsequenceflow]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[SequenceFlow]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["SequenceFlow"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:showdiamondmarker><![CDATA[false]]></design:showdiamondmarker>
+        <design:conditiontype><![CDATA[None]]></design:conditiontype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:defaultflow><![CDATA[false]]></design:defaultflow>
+        <design:isimmediate><![CDATA[false]]></design:isimmediate>
+        <design:id><![CDATA[sequenceflow3]]></design:id>
+        <design:customstencilid><![CDATA[cloudsequenceflow]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[SequenceFlow]]></design:xmlTag>
+      </extensionElements>
+    </sequenceFlow>
+    <receiveTask id="receivePrintComplete" name="Receive Print Job Complete">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudreceivetask]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[ReceiveTask]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["Task","ReceiveTask"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:exclusive><![CDATA[true]]></design:exclusive>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:guid><![CDATA[GEAR-d7d8b780-a99e-40f4-b450-a033e6a98a9f]]></design:guid>
+        <design:looptype><![CDATA[None]]></design:looptype>
+        <design:tasktype><![CDATA[Receive]]></design:tasktype>
+        <design:async><![CDATA[false]]></design:async>
+        <design:isforcompensation><![CDATA[false]]></design:isforcompensation>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:callacitivity><![CDATA[false]]></design:callacitivity>
+        <design:id><![CDATA[receivePrintComplete]]></design:id>
+        <design:loopelementindexvariable><![CDATA[loopCounter]]></design:loopelementindexvariable>
+        <design:name><![CDATA[Receive Print Job Complete]]></design:name>
+        <design:name_en_us><![CDATA[Receive Print Job Complete]]></design:name_en_us>
+        <design:customstencilid><![CDATA[cloudreceivetask]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[ReceiveTask]]></design:xmlTag>
+      </extensionElements>
+    </receiveTask>
+    <userTask id="notifyAuthor" name="Notify Author" flowable:assignee="${initiator}" flowable:formFieldValidation="false">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudformtask]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[FormTask]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["Task","FormTask"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:exclusive><![CDATA[true]]></design:exclusive>
+        <design:loopelementindexvariable><![CDATA[loopCounter]]></design:loopelementindexvariable>
+        <design:isforcompensation><![CDATA[false]]></design:isforcompensation>
+        <design:looptype><![CDATA[None]]></design:looptype>
+        <design:assignee-run><![CDATA[${initiator}]]></design:assignee-run>
+        <design:formfieldvalidation><![CDATA[false]]></design:formfieldvalidation>
+        <design:guid><![CDATA[GEAR-73280753-7f85-49e5-ba92-1b102e8941a2]]></design:guid>
+        <design:tasktype><![CDATA[FormTask]]></design:tasktype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:callacitivity><![CDATA[false]]></design:callacitivity>
+        <design:async><![CDATA[false]]></design:async>
+        <design:id><![CDATA[notifyAuthor]]></design:id>
+        <design:name><![CDATA[Notify Author]]></design:name>
+        <design:name_en_us><![CDATA[Notify Author]]></design:name_en_us>
+        <design:customstencilid><![CDATA[cloudformtask]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[FormTask]]></design:xmlTag>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sequenceflow4" sourceRef="receivePrintComplete" targetRef="notifyAuthor">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudsequenceflow]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[SequenceFlow]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["SequenceFlow"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:showdiamondmarker><![CDATA[false]]></design:showdiamondmarker>
+        <design:conditiontype><![CDATA[None]]></design:conditiontype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:defaultflow><![CDATA[false]]></design:defaultflow>
+        <design:isimmediate><![CDATA[false]]></design:isimmediate>
+        <design:id><![CDATA[sequenceflow4]]></design:id>
+        <design:customstencilid><![CDATA[cloudsequenceflow]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[SequenceFlow]]></design:xmlTag>
+      </extensionElements>
+    </sequenceFlow>
+    <endEvent id="endnoneevent1">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudendnoneevent]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[EndNoneEvent]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["EndNoneEvent"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:terminateall><![CDATA[false]]></design:terminateall>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:id><![CDATA[endnoneevent1]]></design:id>
+        <design:trigger><![CDATA[None]]></design:trigger>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:customstencilid><![CDATA[cloudendnoneevent]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[EndNoneEvent]]></design:xmlTag>
+      </extensionElements>
+    </endEvent>
+    <sequenceFlow id="sequenceflow5" sourceRef="notifyAuthor" targetRef="endnoneevent1">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudsequenceflow]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[SequenceFlow]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["SequenceFlow"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:showdiamondmarker><![CDATA[false]]></design:showdiamondmarker>
+        <design:conditiontype><![CDATA[None]]></design:conditiontype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:defaultflow><![CDATA[false]]></design:defaultflow>
+        <design:isimmediate><![CDATA[false]]></design:isimmediate>
+        <design:id><![CDATA[sequenceflow5]]></design:id>
+        <design:customstencilid><![CDATA[cloudsequenceflow]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[SequenceFlow]]></design:xmlTag>
+      </extensionElements>
+    </sequenceFlow>
+    <serviceTask id="configureVariables" name="Configure variables" flowable:delegateExpression="${printServicePrep}">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudservicetask]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[ServiceTask]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["Task","ServiceTask"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:callacitivity><![CDATA[false]]></design:callacitivity>
+        <design:guid><![CDATA[GEAR-504d2ff1-1e00-45bb-83c2-2bae7bb179c1]]></design:guid>
+        <design:tasktype><![CDATA[Service]]></design:tasktype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:id><![CDATA[configureVariables]]></design:id>
+        <design:looptype><![CDATA[None]]></design:looptype>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:loopelementindexvariable><![CDATA[loopCounter]]></design:loopelementindexvariable>
+        <design:name><![CDATA[Configure variables]]></design:name>
+        <design:name_en_us><![CDATA[Configure variables]]></design:name_en_us>
+        <design:delegateexpression><![CDATA[${printServicePrep}]]></design:delegateexpression>
+        <design:servicetaskuselocalscopeforresultvariable><![CDATA[false]]></design:servicetaskuselocalscopeforresultvariable>
+        <design:async><![CDATA[false]]></design:async>
+        <design:exclusive><![CDATA[false]]></design:exclusive>
+        <design:servicetasktriggerable><![CDATA[false]]></design:servicetasktriggerable>
+        <design:isforcompensation><![CDATA[false]]></design:isforcompensation>
+        <design:customstencilid><![CDATA[cloudservicetask]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[ServiceTask]]></design:xmlTag>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sequenceflow6" sourceRef="configureVariables" targetRef="callPrintService">
+      <extensionElements>
+        <design:stencilid><![CDATA[cloudsequenceflow]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[SequenceFlow]]></design:stencilsuperid>
+        <design:stencilsuperids><![CDATA[["SequenceFlow"]]]></design:stencilsuperids>
+        <design:customstencil><![CDATA[true]]></design:customstencil>
+        <design:showdiamondmarker><![CDATA[false]]></design:showdiamondmarker>
+        <design:conditiontype><![CDATA[None]]></design:conditiontype>
+        <design:bordercolor><![CDATA[#000000]]></design:bordercolor>
+        <design:bgcolor><![CDATA[#ffffff]]></design:bgcolor>
+        <design:defaultflow><![CDATA[false]]></design:defaultflow>
+        <design:isimmediate><![CDATA[false]]></design:isimmediate>
+        <design:id><![CDATA[sequenceflow6]]></design:id>
+        <design:customstencilid><![CDATA[cloudsequenceflow]]></design:customstencilid>
+        <design:customnamespace><![CDATA[http://b3mn.org/stencilset/default.flowable.process.palette.xml#]]></design:customnamespace>
+        <design:xmlTag><![CDATA[SequenceFlow]]></design:xmlTag>
+      </extensionElements>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_asyncDataReceiptProcess">
+    <bpmndi:BPMNPlane bpmnElement="asyncDataReceiptProcess" id="BPMNPlane_asyncDataReceiptProcess">
+      <bpmndi:BPMNShape bpmnElement="startnoneevent1" id="BPMNShape_startnoneevent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="117.0" y="261.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="collectBookInfo" id="BPMNShape_collectBookInfo">
+        <omgdc:Bounds height="80.0" width="100.0" x="192.0" y="236.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="callPrintService" id="BPMNShape_callPrintService">
+        <omgdc:Bounds height="80.0" width="100.0" x="476.0" y="236.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="receivePrintComplete" id="BPMNShape_receivePrintComplete">
+        <omgdc:Bounds height="80.0" width="100.0" x="621.0" y="236.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="notifyAuthor" id="BPMNShape_notifyAuthor">
+        <omgdc:Bounds height="80.0" width="100.0" x="766.0" y="236.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endnoneevent1" id="BPMNShape_endnoneevent1">
+        <omgdc:Bounds height="28.0" width="28.0" x="911.0" y="262.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="configureVariables" id="BPMNShape_configureVariables">
+        <omgdc:Bounds height="80.0" width="100.0" x="330.0" y="236.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sequenceflow2" id="BPMNEdge_sequenceflow2">
+        <omgdi:waypoint x="291.95000000000005" y="276.0"></omgdi:waypoint>
+        <omgdi:waypoint x="330.0" y="276.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceflow1" id="BPMNEdge_sequenceflow1">
+        <omgdi:waypoint x="146.9499984899576" y="276.0"></omgdi:waypoint>
+        <omgdi:waypoint x="191.9999999999917" y="276.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceflow4" id="BPMNEdge_sequenceflow4">
+        <omgdi:waypoint x="720.9499999999999" y="276.0"></omgdi:waypoint>
+        <omgdi:waypoint x="765.9999999999807" y="276.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceflow3" id="BPMNEdge_sequenceflow3">
+        <omgdi:waypoint x="575.95" y="276.0"></omgdi:waypoint>
+        <omgdi:waypoint x="620.9999999999807" y="276.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceflow6" id="BPMNEdge_sequenceflow6">
+        <omgdi:waypoint x="429.9499999999325" y="276.0"></omgdi:waypoint>
+        <omgdi:waypoint x="475.9999999999635" y="276.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceflow5" id="BPMNEdge_sequenceflow5">
+        <omgdi:waypoint x="865.9499999999999" y="276.0"></omgdi:waypoint>
+        <omgdi:waypoint x="911.0" y="276.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

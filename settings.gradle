@@ -1,0 +1,4 @@
+rootProject.name = 'long-external'
+
+include 'print-system'
+include 'vanity-press'
